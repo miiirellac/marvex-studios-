@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100px;           /* Ajuste a altura do header */
+    background-color: #000000; /* Cor de fundo do header */
+    padding: 0 20px; /*Adicona espaçamento lateral*/
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+nav {
+    background-color: #020202; /* Cor de fundo do menu */
+}
+
+.menu {
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 10px 0;
+}
+
+.menu li {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+    display: flex; /*Adiconado para alinhar a barra de pesquisa corretamente*/
+}
+
+.menu a {
+    color: rgb(255, 255, 255); /* Cor do texto do menu */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.s ease; /* Animação suave ao passar o mouse */
+}
+
+.menu a:hover {
+    background-color: #f50707; /* Cor de fundo ao passar o mouse */
+    border-radius: 0px; /* Arredonda os cantos ao passar o mouse */
+}
+
+.search-container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o formulário de busca */
+}
+
+.search-input {
+    padding: 10px; /* Espaçamento interno do campo de busca */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px 0 0 5px; /* Arredonda os cantos à esquerda */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+.search-button {
+    padding: 10px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    background-color: #f50707; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    border-radius: 0 5px 5px 0; /* Arredonda os cantos à direita */
+    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+}
+
+.search-button:hover {
+    background-color: #d40606; /* Cor de fundo ao passar o mouse */
+}
+
+.banner {
+    width: 100%; /* Ocupa toda a largura da página */
+    overflow: hidden; /* Garante que nada "escape" do container */
+}
+
+.banner-image {
+    width: 100%; /* Faz com que a imagem do banner ocupe toda a largura da tela */
+    height: 480px; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço extra em volta da imagem */
+}
+
+.novidades-section {
+    padding: 20px;
+    margin-top: 1px; /* Ajuste este valor conforme necessário */
+    background-color: #ffffff;
+}
+
+.novidades-title {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bolder; /* Negrito */
+    color: #322b2b; /* Cor do texto */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    margin: 20px 0 10px 0; /* Espaço em cima e embaixo do título */
+}
+
+.espaço-section {
+    padding: 20px;
+    margin-top: 100px; /* Ajuste este valor conforme necessário */
+    background-color: #ffffff;
+}
+
+.espaço-title {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bolder; /* Negrito */
+    color: #322b2b; /* Cor do texto */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    margin: 20px 0 10px 0; /* Espaço em cima e embaixo do título */
+}
+
+.filmes-container {
+    display: flex; /* Exibe os filmes em linha */
+    flex-wrap: nowrap; /* Mantém as imagens em uma linha */
+    gap: 1px; /* Espaçamento entre as imagens dos filmes */
+    justify-content: center; /* Centraliza as imagens dos filmes */
+}
+
+
+/* Estilo das imagens dos filmes */
+.filme img {
+    width: 183px; /* Largura fixa das imagens dos filmes */
+    height: 310px; /* Altura fixa das imagens dos filmes */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+    transition: transform 0.6s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito de hover nas imagens dos filmes */
+.filme img:hover {
+    transform: scale(1.10); /* Aumenta ligeiramente o tamanho da imagem quando o cursor está sobre ela */
+}
+
+.noticias-section {
+    padding: 30px; /* Espaçamento interno ao redor da seção */
+    background-color: #ffffff; /* Cor de fundo da seção */
+    display: flex;
+    align-items: center; /* Alinha o título verticalmente */
+}
+
+.container{
+    display: grid;/*validando que o estilo de layout sera dividido o GRID*/
+    grid-template-columns: repeat(4,1fr);/*numero de colunas que sera dividido o GRID*/
+    gap: 5px; /*espaço entre linhas e colunas*/
+    padding: 0px;/*espaçamento entre itens*/
+}
+
+.item img {
+    width: 100%; /* Faz a imagem preencher a largura do item */
+    height: auto; /* Ajusta a altura da imagem para manter a proporção */
+    
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1.0; /* Define a opacidade inicial em 80% */
+    transition: opacity 0.3s ease; /* Transição suave para o efeito */
+}
+
+.item img:hover {
+    opacity: 0.8; /* Define opacidade completa (100%) ao passar o mouse */
+}
+
+/* Estilo para o contêiner do carrossel */
+.div-slider {
+    width: auto; /* Largura automática */
+    height: 400px; /* Altura do carrossel */
+    text-align: center; /* Centraliza o conteúdo textualmente */
+}
+
+/* Estilo para o contêiner dos slides */
+.slides-front {
+    padding: 0; /* Remove o preenchimento */
+    width: 900px; /* Largura do carrossel */
+    height: 500px; /* Altura do carrossel */
+    display: block; /* Exibe o contêiner como bloco */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+}
+
+/* Desativa a seleção de texto para todos os elementos dentro de slides-front */
+.slides-front * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Esconde os inputs de controle dos slides */
+.slides-front input {
+    display: none;
+}
+
+/* Estilo para o contêiner dos slides */
+.slide-container {
+    display: block; /* Exibe o contêiner como bloco */
+}
+
+/* Estilo para cada slide */
+.slide {
+    top: 0; /* Posiciona o slide no topo do contêiner */
+    opacity: 0; /* Torna o slide invisível inicialmente */
+    width: 900px; /* Largura do slide */
+    height: 500px; /* Altura do slide */
+    display: block; /* Exibe o slide como bloco */
+    position: absolute; /* Posiciona o slide absolutamente dentro do contêiner */
+    transform: scale(0); /* Inicialmente escala o slide para 0 */
+    transition: all .7s ease-in-out 0.1s; /* Transição suave para todas as propriedades */
+}
+
+/* Estilo para a imagem dentro de cada slide */
+.slide img {
+    width: 100%; /* Largura da imagem é 100% do slide */
+    height: 100%; /* Altura da imagem é 100% do slide */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo para os botões de navegação (setas) */
+.nav label {
+    width: 150px; /* Largura dos botões de navegação */
+    height: 100%; /* Altura dos botões de navegação */
+    display: none; /* Inicialmente escondido */
+    position: absolute; /* Posiciona o botão absolutamente */
+    opacity: 0; /* Torna o botão invisível */
+    z-index: 9; /* Define a ordem de empilhamento (acima dos slides) */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    transition: opacity .2s; /* Transição suave para a opacidade */
+    color: rgb(247, 236, 236); /* Cor do texto dos botões de navegação */
+    font-size: 156pt; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    line-height: 480px; /* Altura da linha igual à altura dos botões de navegação */
+    font-family: "Varela Round", sans-serif; /* Fonte dos botões de navegação */
+    background-color: rgba(255, 255, 255, 0); /* Cor de fundo transparente */
+    text-shadow: 0px 0px 15px rgb(119, 119, 119); /* Sombra do texto */
+}
+
+/* Mostra os botões de navegação quando o slide é hover (passa o mouse sobre) */
+.slide:hover + .nav label {
+    opacity: 0.5; /* Torna o botão parcialmente visível */
+}
+
+/* Mostra o botão de navegação quando o mouse passa por cima */
+.nav label:hover {
+    opacity: 1; /* Torna o botão totalmente visível */
+}
+
+/* Posiciona o botão de navegação para avançar slides no lado direito */
+.nav .next {
+    right: 0; /* Alinha à direita */
+}
+
+/* Estilo aplicado aos slides quando o input de controle está checado */
+input:checked + .slide-container .slide {
+    opacity: 1; /* Torna o slide visível */
+    transform: scale(1); /* Restaura a escala do slide para 1 */
+    transition: opacity 1s ease-in-out 0.1s; /* Transição suave para a opacidade */
+}
+
+/* Mostra os botões de navegação quando o input de controle está checado */
+input:checked + .slide-container .nav label {
+    display: block; /* Torna os botões de navegação visíveis */
+}
+
+/* Estilo para os pontos de navegação (indicadores) */
+.nav-dots {
+    width: 100%; /* Largura total do contêiner de pontos */
+    bottom: 9px; /* Posiciona na parte inferior */
+    height: 11px; /* Altura dos pontos */
+    display: block; /* Exibe o contêiner como bloco */
+    position: relative; /* Posiciona relativamente */
+    text-align: center; /* Centraliza os pontos */
+}
+
+/* Estilo para cada ponto de navegação */
+.nav-dots .nav-dot {
+    top: 450px; /* Posiciona os pontos mais abaixo no carrossel */
+    width: 11px; /* Largura dos pontos */
+    height: 11px; /* Altura dos pontos */
+    margin: 0 4px; /* Espaçamento entre os pontos */
+    position: relative; /* Posiciona relativamente */
+    border-radius: 100%; /* Faz os pontos serem circulares */
+    display: inline-block; /* Exibe os pontos em linha */
+    background-color: rgba(245, 241, 241, 0.836); /* Cor de fundo dos pontos */
+}
+
+/* Muda a cor dos pontos quando o mouse passa por cima */
+.nav-dots .nav-dot:hover {
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    background-color: rgba(250, 249, 249, 0.8); /* Torna o fundo mais escuro */
+}
+
+/* Muda a cor dos pontos quando o input correspondente está checado */
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3 {
+    background: rgba(224, 222, 222, 0.8); /* Torna o ponto correspondente mais escuro */
+}
+
+/* Efeito de zoom quando um elemento com a classe 'efeito' é hover */
+.efeito:hover {
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    transition-duration: 1s; /* Duração da transição */
+    transform: scale(1.3, 1.3); /* Aumenta o tamanho do elemento em 1.3x */
+}
+
+.capas-container {
+    display: flex; /* Exibe os filmes em linha */
+    flex-wrap: wrap; /* Mantém as imagens em uma linha */
+    gap: 20px; /* Espaçamento entre as imagens dos filmes */
+    justify-content: center; /* Centraliza as imagens dos filmes */
+}
+
+.capas img {
+    width: 183px; /* Largura fixa das imagens dos filmes */
+    height: 310px; /* Altura fixa das imagens dos filmes */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+    transition: transform 0.6s ease; /* Transição suave para o efeito de hover */
+}
+
+.capas img:hover {
+    transform: scale(1.10); /* Aumenta ligeiramente o tamanho da imagem quando o cursor está sobre ela */
+}
+
+.tabela-lancamentos {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff0000;
+    color: white;
+}
+
+tr:hover {
+    background-color: #ff0000;
+}
+
+td {
+    color: #050505;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-neutral-0: black;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29c;
+    --color-neutral-40: #f5f5f5;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40)
+
+}
+
+.footerlink {
+    text-decoration: dashed;
+}
+
+#footercontent {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footercontatos h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footeredesocial {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footeredesocial .footerlink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.1s;
+}
+
+#footeredesocial .footerlink i {
+    font-size: 1.25rem;
+}
+
+#footeredesocial .footerlink:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#twitter {
+    background-color: rgb(74, 73, 73);
+}
+
+.footerlista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footerlista .footerlink {
+    color: var(--color-neutral-30);
+    transition: all 0.2s;
+}
+
+.footerlista .footerlink:hover {
+    color: #da2201;
+}
+
+#footerinscrever {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footerinscrever p {
+    color: var(--color-neutral-30);
+}
+
+#inputgrp {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    color:var(--color-neutral-10)
+}
+
+#inputgrp input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#inputgrp button {
+    background-color: #da2201;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#inputgrp button:hover {
+    opacity: 0.8;
+}
+
+#footercopyrights {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width:768px) {
+    #footercontent {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+    }
+}
+
+@media screen and (max-width:426px) {
+    #footercontent {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
